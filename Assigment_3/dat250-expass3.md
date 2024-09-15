@@ -1,5 +1,5 @@
 # Project Report: Poll App SPA Development
-Carlos Fernández Calderón_
+_Carlos Fernández Calderón_
 
 ## Introduction
 The purpose of this project was to develop a web-based graphical user interface (GUI) for a REST API built in a previous assignment. This interface is implemented as a Single Page Application (SPA) using Svelte. The app allows users to create polls with multiple vote options and vote on existing polls. The project follows the principles of modern web development using a combination of frontend and backend technologies, including JavaScript (Svelte) and Java (Spring Boot).
