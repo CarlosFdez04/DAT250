@@ -1,0 +1,29 @@
+meta {
+  name: create voteOption
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/voteOptions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "voteOption": {
+      "caption":"Azul",
+      "presentationOrder":1,
+      "poll":{
+        "question":"¿Cúal es tu color favorito?",
+        "publishedAt":"2025-09-08T12:00:00Z",
+        "validUntil":"2025-09-15T12:00:00Z",
+        "user": { 
+          "username":"Dario",
+          "email":"DarioVerguita@gmail.com"
+        }
+      }
+    }
+  }
+}
