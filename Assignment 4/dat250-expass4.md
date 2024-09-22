@@ -1,33 +1,52 @@
-# Project Report: Banking/Credit Card Domain Model Implementation
+
+# Project Report: Banking/Credit Card Domain Model Implementation  
 _Carlos Fernández Calderón_
 
-## Introduction
-The purpose of this project was to implement a banking/credit card domain model using the Java Persistence Architecture (JPA). This assignment aimed to explore object-relational mapping by creating entities such as `Customer`, `CreditCard`, `Bank`, `Address`, and `Pincode`, and persisting these objects in a database.
+## Introduction  
+The objective of this project was to implement a banking/credit card domain model using Java Persistence Architecture (JPA). The assignment focused on exploring object-relational mapping by creating entities such as `Customer`, `CreditCard`, `Bank`, `Address`, and `Pincode` and persisting these objects in a database. The project involved setting up bidirectional relationships between entities and ensuring their persistence in a relational database.
 
 ## Step-by-Step Progress
 
-### Step 1: Setting Up the Project
-- Forked the template project from GitHub and initialized the Java application with Gradle.
-- Ensured that the application runs without errors by executing the `Main` class.
+### Step 1: Setting Up the Project  
+- Forked the template project from GitHub and initialized the Java application using Gradle.  
+- Verified that the application ran successfully by executing the `Main` class without errors.
 
-### Step 2: Implementing the Domain Model
-- Created entity classes for the domain model based on the provided UML class diagram.
-- Established bidirectional relationships between entities such as `Customer` and `Address`, and `Customer` and `CreditCard`.
+### Step 2: Implementing the Domain Model  
+- Created entity classes (`Customer`, `CreditCard`, `Bank`, `Address`, `Pincode`) based on the provided UML class diagram.  
+- Established bidirectional relationships between entities. For example, the `Customer` class has a `ManyToOne` relationship with `Address` and a `OneToMany` relationship with `CreditCard`.  
 
-### Step 3: Persisting Objects with JPA
-- Implemented the `CreditCardsMain` class to handle the persistence of objects.
-- Used `EntityManager` to manage transactions and persist instances of `Customer`, `CreditCard`, `Bank`, `Address`, and `Pincode`.
+### Step 3: Persisting Objects with JPA  
+- Implemented the `CreditCardsMain` class to handle object persistence using `EntityManager`.  
+- Persisted instances of the `Customer`, `CreditCard`, `Bank`, `Address`, and `Pincode` entities to ensure correct data storage in the database.
 
-### Step 4: Testing the Implementation
-- Developed unit tests in the `CreditCardsMainTest` class to ensure that the persistence operations work as expected.
-- Verified that the tests run successfully without any modifications to the provided test case.
+### Step 4: Testing the Implementation  
+- Developed unit tests in the `CreditCardsMainTest` class to ensure that the persistence logic worked as expected.  
+- All tests passed without modification to the provided test case, confirming that the system behaves as required.
 
-## Technical Problems Encountered
+## Technical Problems Encountered and Resolutions
 
-- **Database Configuration**: Configuring the in-memory H2 database required adjustments in the `persistence.xml` file to ensure proper connection settings.
-- **Entity Relationships**: Understanding and correctly implementing the bidirectional relationships in JPA introduced some complexities, particularly with the `ManyToMany` annotations.
-- **Inspecting the Database**: Using the H2 console to inspect the database schema and tables was initially confusing, but it became clearer after reviewing the H2 documentation.
+### 1. **Database Configuration**  
+Initially, I encountered issues configuring the in-memory H2 database for the project. The connection settings in the `persistence.xml` file had to be adjusted to ensure the database was properly initialized and accessible during runtime. I resolved this by setting the correct JDBC URL, driver class, and dialect for H2 in `persistence.xml`.
 
-## Link to Code
-The code for this assignment can be found in the following repository:  
-https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%204/dat250-jpa-tutorial-master
+### 2. **Entity Relationships**  
+Implementing bidirectional relationships, particularly between `Customer` and `CreditCard` as well as `Customer` and `Bank`, was challenging. The correct use of JPA annotations (`OneToMany`, `ManyToOne`, and `ManyToMany`) required careful consideration to avoid issues like infinite loops or unidirectional associations not reflecting on the opposite side. For instance, mapping `CreditCard` to multiple `Customer` objects required transforming the `Collection<Customer>` into a `List<Customer>` to better handle the persistence logic.
+
+### 3. **Inspecting the Database**  
+Using the H2 console to inspect database tables presented a learning curve. At first, it was unclear how to navigate the database and view the structure of the created tables. After reviewing the H2 documentation and learning to run queries through the console, I was able to inspect the schema and confirm the correct creation of the `CUSTOMER`, `CREDIT_CARD`, and `BANK` tables, along with their relationships.
+
+## Database Table Inspection
+
+Using the H2 console, I inspected the tables generated by JPA. The following tables were successfully created:
+
+- `CUSTOMER`: Contains customer information such as ID, name, and associated address.
+- `CREDIT_CARD`: Includes details about each credit card, such as card number, customer associations, and balance.
+- `BANK`: Stores data on the bank entity, including its relationship with credit cards.
+- `ADDRESS`: Contains the customer address details.
+- `PINCODE`: Represents the pin codes associated with customers and addresses.
+
+## Link to Code  
+  
+
+
+## Conclusion  
+The project helped reinforce my understanding of object-relational mapping using JPA. While some technical challenges arose, such as managing entity relationships and inspecting the database, they were resolved through careful review and debugging. There is, however, a pending issue with modifying the test case that remains unresolved due to assignment constraints.
