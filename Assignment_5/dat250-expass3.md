@@ -11,7 +11,8 @@ I successfully installed MongoDB 4.4 Community Edition, following the documented
 ### Experiment 1: CRUD Operations  
 This experiment involved conducting basic CRUD (Create, Read, Update, Delete) actions within a MongoDB environment. Below is a breakdown of the operations executed, alongside their respective screenshots:
 
-1. **Inserting Documents**  
+1. **Inserting Documents**
+![Insert](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/1_Insert.png) 
 The `insertMany()` function was used to add multiple documents into a MongoDB collection.  
  
 ![Insert_many](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/Insert_many.png)
