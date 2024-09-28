@@ -5,7 +5,8 @@
 I successfully installed MongoDB 4.4 Community Edition, following the documented steps precisely. The validation of the installation package using the SHA-256 checksum was also completed without any complications.
 
 **Screenshot 1: Package Validation Process**  
-![Document Validation](./C:\Users\usuario\OneDrive\Escritorio\Universidad\4º\Norway\DAT250\Assignment_5/ValidationScreenshot.png)
+![Document Validation](file:///C:/Users/usuario/OneDrive/Escritorio/Universidad/4º/Norway/DAT250/Assignment_5/ValidationScreenshot.png)
+
 
 ### Experiment 1: CRUD Operations  
 This experiment involved conducting basic CRUD (Create, Read, Update, Delete) actions within a MongoDB environment. Below is a breakdown of the operations executed, alongside their respective screenshots:
