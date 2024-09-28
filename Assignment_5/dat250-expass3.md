@@ -15,7 +15,7 @@ This experiment involved conducting basic CRUD (Create, Read, Update, Delete) ac
 The `insertMany()` function was used to add multiple documents into a MongoDB collection.  
 
 **Screenshot: Documents Added**  
-![Insert_many]
+![Insert_many](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/Insert_many.png)
 
 The collection was then queried to confirm successful insertion:
 
