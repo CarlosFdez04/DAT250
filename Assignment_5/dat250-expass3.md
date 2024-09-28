@@ -1,78 +1,71 @@
-# Update the report content to include the actual image names based on the inspection
+# DAT250: Software Technology Experiment – Task 5  
+## MongoDB Configuration and Execution
 
-report_with_images = """
-# DAT250: Software Technology Experiment - Task 6  
-## Spring Boot REST API - Setup and Testing
+### MongoDB Installation  
+I successfully installed MongoDB 4.4 Community Edition, following the documented steps precisely. The validation of the installation package using the SHA-256 checksum was also completed without any complications.
 
-### Project Setup and Installation  
-The setup of the Spring Boot environment for the survey API was completed successfully. All required dependencies were included in the `pom.xml` file, and the project compiled without any issues. The application is running locally on port 8080.
+**Screenshot 1: Package Validation Process**  
+![Captura de pantalla 2024-09-24 153102]
 
-![Screenshot 1: Application running on localhost:8080](Assignment_5/Screenshot_1.png)  
-_Screenshot of the Spring Boot application startup log_
+### Experiment 1: CRUD Operations  
+This experiment involved conducting basic CRUD (Create, Read, Update, Delete) actions within a MongoDB environment. Below is a breakdown of the operations executed, alongside their respective screenshots:
 
----
+1. **Inserting Documents**  
+The `insertMany()` function was used to add multiple documents into a MongoDB collection.  
 
-## Experiment 1: CRUD Operations for Polls  
-In this experiment, I implemented the basic CRUD (Create, Read, Update, and Delete) operations for the survey API. Below are the key operations and their corresponding screenshots.
+**Screenshot: Documents Added**  
+![Insert_many]
 
-### 1. Create Polls  
-This operation allows users to create new polls with associated vote options. The `POST /polls` endpoint was used for this.
+The collection was then queried to confirm successful insertion:
 
-**Example: Creating a new poll**  
-![Screenshot: Postman - Poll Creation Request](Assignment_5/Screenshot_2.png)  
-![Screenshot: Database - New Poll Entry](Assignment_5/Screenshot_2_1.png)
+**Screenshot: Query Collection**  
+![Consulta_collecion]
 
-### 2. Query Polls  
-The `GET /polls` endpoint retrieves all existing polls from the database. The `findAll()` method was used in the repository layer to fetch all polls.
+2. **Retrieving Documents**  
+To retrieve documents, I used the `find()` function.  
 
-**Example: Querying all polls**  
-![Screenshot: Postman - Poll Query Response](Assignment_5/Screenshot_2_2.png)  
-![Screenshot: Database - Poll Records](Assignment_5/Screenshot_2_3.png)
+**Screenshot: Retrieved Documents**  
+![Insert_many_2]
 
-### 3. Update Polls  
-The `PUT /polls/{id}` endpoint updates an existing poll. The `save()` method in the repository was used to persist the updated entity.
+A compound query was performed to fetch all documents with a status of "A," and where the quantity was less than 30 or the item name began with the letter "p."
 
-**Example: Updating a poll**  
-![Screenshot: Postman - Poll Update Request](Assignment_5/Screenshot_2_4.png)  
-![Screenshot: Database - Updated Poll Record](Assignment_5/Screenshot_2_5.png)
+**Screenshot: Compound Query**  
+![status_A_and_qty_less_than_($lt)_30_or_starts_p]
 
-### 4. Delete Polls  
-The `DELETE /polls/{id}` endpoint removes a poll from the database.
+3. **Updating Documents**  
+For updates, I used the `updateOne()` function to alter specific documents in the collection.
 
-**Example: Deleting a poll**  
-![Screenshot: Postman - Poll Deletion Request](Assignment_5/Screenshot_3.png)  
-![Screenshot: Database - Poll Record Deleted](Assignment_5/Screenshot_3_1.png)
+**Screenshot: Insert and Update**  
+![Insert_many_and_update1]
 
----
+Additionally, I used the `updateMany()` and `replaceOne()` functions to handle bulk updates and replacements.
 
-## Experiment 2: Voting Feature  
-In this experiment, I tested the functionality of voting on polls using the `POST /polls/{id}/vote` endpoint. This feature allows users to vote for specific options within a poll.
+**Screenshot: Update and Replace**  
+![update_many_replace1]
 
-### 1. Vote on Polls  
-The `POST /polls/{id}/vote` endpoint was successfully tested, allowing votes to be registered.
+4. **Deleting Documents**  
+Document deletions were handled using the `deleteOne()` function for individual removals, followed by a batch deletion using `deleteMany()`.
 
-![Screenshot: Postman - Voting Request](Assignment_5/Screenshot_3_2.png)  
-![Screenshot: Database - Vote Record](Assignment_5/Screenshot_3_3.png)
+**Screenshot: Insert and Delete**  
+![Insert_many_delete_many]
 
-### 2. Retrieve Poll Results  
-The `GET /polls/{id}/results` endpoint returns the voting results for a specific poll.
+5. **Bulk Write Operations**  
+Multiple write operations, including inserts, updates, deletions, and replacements, were efficiently executed using `bulkWrite()`.
 
-![Screenshot: Postman - Poll Results](Assignment_5/Screenshot_3_4.png)  
-![Screenshot: Database - Poll Results](Assignment_5/Screenshot_4.png)
+**Screenshot: Bulk Write**  
+![Insert_many_bulkwrite]
 
----
+### Experiment 2: Aggregation Using Map-Reduce  
+The focus of this experiment was to explore the Map-Reduce aggregation mechanism in MongoDB. This process is valuable for summarizing and analyzing large datasets by applying map and reduce functions.
 
-## Pending Issues  
-While the majority of the CRUD and voting operations were completed successfully, there are some areas that need further attention:  
+**Screenshot: Map-Reduce Example**  
+![experimento2]
 
-- **User Authentication**: Currently, any user can create or vote on a poll without authentication. Adding user roles and authentication will be a future task.  
-- **Error Handling**: More detailed error messages need to be implemented for invalid requests.
+**Screenshot: Map-Reduce Results**  
+![Experiment2_result]
 
-"""
+### Advantages of Map-Reduce  
+Map-Reduce provides an efficient way to handle and aggregate vast amounts of data by breaking down complex tasks into smaller, manageable operations. It enhances MongoDB’s ability to perform large-scale data analysis in a much more effective manner compared to executing individual queries.
 
-# Save the updated report with image paths
-updated_report_path = "/mnt/data/SpringBoot_REST_API_Report_with_Images.md"
-with open(updated_report_path, "w") as file:
-    file.write(report_with_images)
-
-updated_report_path
+### Remaining Issues  
+There are no outstanding issues regarding this task. All operations were performed successfully without encountering any errors.
