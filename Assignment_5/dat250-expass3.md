@@ -1,4 +1,7 @@
-# DAT250: Software Technology Experiment – Task 5  
+# DAT250: Software Technology Experiment – Task 5
+
+_By Carlos Fernández Calderón_
+
 ## MongoDB Configuration and Execution
 
 ### MongoDB Installation  
