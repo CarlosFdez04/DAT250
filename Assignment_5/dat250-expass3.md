@@ -14,7 +14,8 @@ This experiment involved conducting basic CRUD (Create, Read, Update, Delete) ac
 1. **Inserting Documents**
 ![Insert](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/1_Insert.png) 
 The `insertMany()` function was used to add multiple documents into a MongoDB collection.  
- 
+
+**Screenshot: Documents Added**
 ![Insert_many](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/Insert_many.png)
 
 The collection was then queried to confirm successful insertion:
@@ -67,6 +68,3 @@ The focus of this experiment was to explore the Map-Reduce aggregation mechanism
 
 ### Advantages of Map-Reduce  
 Map-Reduce provides an efficient way to handle and aggregate vast amounts of data by breaking down complex tasks into smaller, manageable operations. It enhances MongoDB’s ability to perform large-scale data analysis in a much more effective manner compared to executing individual queries.
-
-### Remaining Issues  
-There are no outstanding issues regarding this task. All operations were performed successfully without encountering any errors.
