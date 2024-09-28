@@ -25,7 +25,7 @@ The collection was then queried to confirm successful insertion:
 To retrieve documents, I used the `find()` function.  
 
 **Screenshot: Retrieved Documents**  
-![Insert_many_2]
+![find](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/find.png)
 
 A compound query was performed to fetch all documents with a status of "A," and where the quantity was less than 30 or the item name began with the letter "p."
 
