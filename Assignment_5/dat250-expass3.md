@@ -31,7 +31,7 @@ To retrieve documents, I used the `find()` function.
 A compound query was performed to fetch all documents with a status of "A," and where the quantity was less than 30 or the item name began with the letter "p."
 
 **Screenshot: Compound Query**  
-![find_2](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/find.png)
+![find_2](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/find_2.png)
 
 3. **Updating Documents**  
 For updates, I used the `updateOne()` function to alter specific documents in the collection.
