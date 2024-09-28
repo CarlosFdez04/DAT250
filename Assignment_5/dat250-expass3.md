@@ -13,14 +13,13 @@ This experiment involved conducting basic CRUD (Create, Read, Update, Delete) ac
 
 1. **Inserting Documents**  
 The `insertMany()` function was used to add multiple documents into a MongoDB collection.  
-
-**Screenshot: Documents Added**  
+ 
 ![Insert_many](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/Insert_many.png)
 
 The collection was then queried to confirm successful insertion:
 
 **Screenshot: Query Collection**  
-![Consulta_collecion]
+![Consulta_collecion](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_5/Images/query.png)
 
 2. **Retrieving Documents**  
 To retrieve documents, I used the `find()` function.  
