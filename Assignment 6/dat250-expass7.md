@@ -20,8 +20,8 @@ sudo docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.
 ![Screenshot_2](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/Screenshot2_Experiment_1.png)
 ![Screenshot_3](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/Screenshot_Experiment_1.png)
 
-### Repository for Experiments 1
-You can find the screenshots of the experiment at the following link: [GitHub Repository](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_1)
+### Repository for Experiment 1
+You can find the screenshots of the experiment at the following link: [Experiment 1](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_1)
 
 ### Pending Issues
 - No pending issues related to the installation of RabbitMQ.
@@ -39,10 +39,10 @@ During the completion of Experiment 2, I encountered several technical problems:
 
 4. **Testing Framework Setup**: Configuring the JUnit testing framework in Gradle posed challenges as well, especially regarding the version compatibility with the other dependencies.
 
-## Code Repository
+## Code Repository for Experiment 2
 
 You can find the code for Experiments 1-4 in the following repository link:
-[Link to Your Code Repository](URL_OF_YOUR_REPOSITORY)
+[Experiment 2](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_2/Assignment_6)
 
 ## Pending Issues
 
