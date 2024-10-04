@@ -1,6 +1,35 @@
-# DAT250 - Report
-# Experiment 2 #
-## Technical Problems Encountered
+
+# DAT250 - Experiment 1 & 2 Report
+
+## Experiment 1: Installation
+
+For the first experiment, I followed the installation instructions for RabbitMQ as detailed in the official documentation [RabbitMQ Installation Guide](https://www.rabbitmq.com/download.html). I opted for the **Docker installation**, which provided a convenient and isolated environment for testing RabbitMQ functionalities.
+
+### Steps Taken for Installation:
+
+1. **Installed Docker**: I ensured that Docker was installed on my machine by following the Docker installation instructions for my operating system.
+
+2. **Pulled RabbitMQ Image**: I pulled the official RabbitMQ Docker image using the following command:
+   ```bash
+   docker pull rabbitmq:management
+   ```
+
+3. **Started RabbitMQ Server**: I started the RabbitMQ server with the management plugin enabled using the command:
+   ```bash
+   docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+   ```
+
+4. **Accessed Management UI**: I accessed the RabbitMQ management interface by navigating to `http://localhost:15672` in my web browser. I logged in using the default username and password (`guest` / `guest`).
+
+5. **Verification**: I verified the installation by checking the default exchanges and queues provided by RabbitMQ.
+
+### Technical Problems Encountered
+
+1. **Docker Configuration**: Initially, I faced issues with Docker not starting properly. I resolved this by ensuring that my Docker installation was up to date and that my system met the requirements for running Docker.
+
+2. **Network Configuration**: There were issues with accessing the RabbitMQ management UI. This was solved by correctly mapping the ports in the Docker run command.
+
+## Experiment 2: Technical Problems Encountered
 
 During the completion of Experiment 2, I encountered several technical problems:
 
@@ -29,4 +58,4 @@ There are a couple of pending issues that I could not resolve during this assign
 
 ## Conclusion
 
-This assignment helped me understand the integration of messaging systems using RabbitMQ and the challenges that can arise when dealing with different programming languages and build systems.
+These assignments helped me understand the installation and integration of messaging systems using RabbitMQ, as well as the challenges that can arise when dealing with different programming languages and build systems.
