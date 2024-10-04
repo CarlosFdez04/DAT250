@@ -1,6 +1,3 @@
-
-# DAT250 - Experiment 1 & 2 Report
-
 # DAT250 - Experiment Report
 
 ## Experiment 1: Installation
