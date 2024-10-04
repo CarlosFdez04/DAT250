@@ -1,5 +1,5 @@
-# DAT250 - Experiment 2 Report
-
+# DAT250 - Report
+# Experiment 2 #
 ## Technical Problems Encountered
 
 During the completion of Experiment 2, I encountered several technical problems:
