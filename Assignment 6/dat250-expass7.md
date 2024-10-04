@@ -16,7 +16,11 @@ sudo docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.
 ### Technical Problems Encountered
 - None during the installation process. The Docker installation and RabbitMQ setup went smoothly.
 
-### Code Repository for Experiments 1
+![Screenshot_1](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/Screenshot3_Experiment_1.png)
+![Screenshot_2](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/Screenshot2_Experiment_1.png)
+![Screenshot_3](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/Screenshot_Experiment_1.png)
+
+### Repository for Experiments 1
 You can find the screenshots of the experiment at the following link: [GitHub Repository](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_1)
 
 ### Pending Issues
