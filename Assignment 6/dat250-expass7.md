@@ -1,33 +1,30 @@
 
 # DAT250 - Experiment 1 & 2 Report
 
+# DAT250 - Experiment Report
+
 ## Experiment 1: Installation
 
-For the first experiment, I followed the installation instructions for RabbitMQ as detailed in the official documentation [RabbitMQ Installation Guide](https://www.rabbitmq.com/download.html). I opted for the **Docker installation**, which provided a convenient and isolated environment for testing RabbitMQ functionalities.
+For the installation of RabbitMQ, I followed the instructions outlined in the official RabbitMQ documentation. Below are the commands I used to set up RabbitMQ using Docker on my system:
 
-### Steps Taken for Installation:
-
-1. **Installed Docker**: I ensured that Docker was installed on my machine by following the Docker installation instructions for my operating system.
-
-2. **Pulled RabbitMQ Image**: I pulled the official RabbitMQ Docker image using the following command:
-   ```bash
-   docker pull rabbitmq:management
-   ```
-
-3. **Started RabbitMQ Server**: I started the RabbitMQ server with the management plugin enabled using the command:
-   ```bash
-   docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
-   ```
-
-4. **Accessed Management UI**: I accessed the RabbitMQ management interface by navigating to `http://localhost:15672` in my web browser. I logged in using the default username and password (`guest` / `guest`).
-
-5. **Verification**: I verified the installation by checking the default exchanges and queues provided by RabbitMQ.
+```bash
+sudo apt update
+sudo apt install docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo docker --version
+sudo docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management
+```
 
 ### Technical Problems Encountered
+- None during the installation process. The Docker installation and RabbitMQ setup went smoothly.
 
-1. **Docker Configuration**: Initially, I faced issues with Docker not starting properly. I resolved this by ensuring that my Docker installation was up to date and that my system met the requirements for running Docker.
+### Code Repository for Experiments 1-4
+You can find my code for experiments 1-4 at the following link: [GitHub Repository](https://github.com/yourusername/repository)
 
-2. **Network Configuration**: There were issues with accessing the RabbitMQ management UI. This was solved by correctly mapping the ports in the Docker run command.
+### Pending Issues
+- No pending issues related to the installation of RabbitMQ.
+
 
 ## Experiment 2: Technical Problems Encountered
 
