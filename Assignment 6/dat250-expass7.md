@@ -62,6 +62,24 @@ You can find the code for Experiments 1-4 in the following repository link:
 [Experiment 3](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_3/Assignment_6)
 
 
+
+## Experiment 4: Technical Problems Encountered
+
+During the completion of Experiment 4, I encountered several technical problems:
+
+1. **Dependency Issues**: I faced challenges with managing the RabbitMQ client dependency in the project. It was crucial to ensure that the correct version of the dependency was included in the `build.gradle.kts` file to avoid runtime errors.
+
+2. **Compilation Errors**: While compiling the Java files, I encountered multiple errors related to missing packages from the RabbitMQ client library. This indicated that the classpath was not set correctly, which required careful review and adjustments to the classpath variable.
+
+3. **Classpath Configuration**: There were difficulties in properly setting up the classpath for the RabbitMQ client JAR file. Ensuring the correct path was vital to avoid compilation errors. I had to verify that the JAR file was correctly located in the specified directory.
+
+4. **Debugging Runtime Issues**: After successful compilation, I encountered runtime issues related to message publishing and subscribing. It required thorough debugging of the connection settings and exchange configurations to ensure proper communication with RabbitMQ.
+
+## Code Repository for Experiment 4
+
+You can find the code for Experiments 1-4 in the following repository link:
+[Experiment 4](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_4/Assignment_6)
+
 ## Pending Issues
 
 No pending issues
