@@ -44,15 +44,27 @@ During the completion of Experiment 2, I encountered several technical problems:
 You can find the code for Experiments 1-4 in the following repository link:
 [Experiment 2](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_2/Assignment_6)
 
+# Experiment 3: Technical Problems Encountered
+
+During the completion of Experiment 3, I encountered several technical problems:
+
+1. **RabbitMQ Connection Issues**: I faced difficulties in establishing a connection to RabbitMQ due to incorrect host configurations. This was resolved by verifying the RabbitMQ server settings and ensuring that it was running properly.
+
+2. **Dependency Conflicts**: There were conflicts between the versions of dependencies specified in the `build.gradle.kts` file, especially with the RabbitMQ client. I had to review and adjust the dependency versions to ensure compatibility with the Kotlin version being used.
+
+3. **Gradle Build Failures**: The Gradle build failed multiple times due to incorrect configurations in the `build.gradle.kts` file. I had to carefully follow the documentation to set up the application plugin and specify the main class correctly.
+
+4. **Code Migration Issues**: Transitioning code from Kotlin to Java led to syntax and structural problems, particularly with type declarations and method implementations. I needed to carefully review and modify the code to ensure it adhered to Java standards.
+
+## Code Repository for Experiment 3
+
+You can find the code for Experiments 1-4 in the following repository link:
+[Experiment 3](https://github.com/CarlosFdez04/DAT250/tree/main/Assignment%206/Experiment_3/Assignment_6)
+
+
 ## Pending Issues
 
-There are a couple of pending issues that I could not resolve during this assignment:
-
-1. **Error Handling**: I still need to implement proper error handling in both the `Send` and `Recv` classes to manage potential exceptions during message sending and receiving.
-
-2. **Documentation**: Further documentation is needed for the code to make it clearer for future users or for anyone reviewing the project.
-
-3. **Unit Tests**: I have not yet completed the unit tests for the `Send` and `Recv` classes, which is crucial for validating their functionality.
+No pending issues
 
 ## Conclusion
 
