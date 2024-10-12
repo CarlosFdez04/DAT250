@@ -58,12 +58,12 @@ implementation("org.postgresql:postgresql:42.7.4")
 ### Original `persistence.xml` File
 Here’s the original `persistence.xml` file before modifications:
 
-![Original persistence.xml](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/original_persistence.xml.png)
+![Original persistence.xml](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_7/Experiment_1/PersistanceOriginal.png)
 
 ### Modified `persistence.xml` File
 After modifying the file for PostgreSQL, it looks like this:
 
-![Modified persistence.xml](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/modified_persistence.xml.png)
+![Modified persistence.xml](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_7/Experiment_1/PersistanceChange.png)
 
 I modified the `persistence.xml` file to change the connection parameters from H2 to PostgreSQL:
 
@@ -78,7 +78,7 @@ I modified the `persistence.xml` file to change the connection parameters from H
 ### Running Unit Tests
 I attempted to run my Unit tests; however, they failed due to the absence of the expected tables in the new PostgreSQL database. Here’s a screenshot of the project execution when it didn’t work:
 
-![Execution Failed](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/execution_failed.png)
+![Execution Failed](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_7/Experiment_1/FailedTests.png)
 
 To resolve this, I considered enabling automatic schema generation by adding the following lines to `persistence.xml`:
 
@@ -95,7 +95,7 @@ I could apply the generated SQL statements manually via a SQL client or use the 
 
 After making the necessary adjustments and running the project again, it worked successfully:
 
-![Execution Successful](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment%206/Experiment_1/execution_successful.png)
+![Execution Successful](https://github.com/CarlosFdez04/DAT250/blob/main/Assignment_7/Experiment_1/Success.png)
 
 ### Technical Problems Encountered
 - **Database Connection Errors**: Encountered difficulties connecting to PostgreSQL due to incorrect parameters in `persistence.xml`.
